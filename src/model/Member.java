@@ -25,10 +25,12 @@ public class Member {
      * Books a session for the member.
      * 
      * @param session The session to book.
+     * @return The created reservation.
      */
-    public void bookSession(Session session) {
+    public Reservation bookSession(Session session) {
         Reservation reservation = new Reservation(session);
         this.reservations.add(reservation);
+        return reservation;
     }
 
     /**
